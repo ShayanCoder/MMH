@@ -1,0 +1,148 @@
+Great — with 17 years of experience, strong engineering background, and 120 hours total prep time (1–3 months), you don’t need a beginner plan.
+You need a high-efficiency, pattern-focused plan aimed at FAANG & top-tier interviews.
+Below is a complete 120-hour LeetCode + System Design + Behavioral study plan, optimized for senior-level roles.
+________________________________________
+✅ Your Personalized 120-Hour Interview Prep Plan
+🎯 Goal: Senior Engineer / Staff-level interview readiness
+🗓 Duration: 1 month full-time, or 3 months part-time
+🧠 Focus: Patterns, not problem count
+________________________________________
+⭐ Summary of What You’ll Solve
+Topic
+Problems
+LeetCode Easy
+20
+LeetCode Medium
+70
+LeetCode Hard
+15
+Total
+105 high-impact problems
+This is enough for FAANG senior-level interviews when paired with system design + behavioral prep.
+________________________________________
+🧩 Hour Allocation (120 hours)
+Area
+Hours
+DSA / LeetCode
+70 hours
+System Design
+35 hours
+Behavioral + Leadership + STAR
+15 hours
+TOTAL
+120 hours
+________________________________________
+🧠 DSA Plan (70 Hours)
+Pattern-Based Breakdown
+You’ll solve only the highest-impact problems from each pattern.
+📌 Phase 1 – Warm-up (10 hours)
+Arrays — 5 mediums
+Two pointers — 3 mediums
+Hashmap — 5 mediums
+Sliding window — 5 mediums
+Easy problems — 20 total (1 hour/day warmup)
+→ Goal: Speed + mechanics.
+________________________________________
+📌 Phase 2 – Core Patterns (40 hours)
+Binary Search (6–8 problems)
+Search Rotated Array
+Koko Eating Bananas
+Median of Two Sorted Arrays (Hard)
+Trees & Graphs (15–18 problems)
+DFS / BFS
+Binary Tree Right View
+Lowest Common Ancestor
+Number of Islands
+Clone Graph
+Graph cycle detection
+Word Ladder (Hard)
+DP (12–15 problems)
+Classic 1D DP:
+House Robber
+Coin Change
+LIS
+2D DP:
+Edit Distance
+DP on grids
+Hard DP:
+Burst Balloons or Interleaving Strings
+Greedy (6–8 problems)
+Merge Intervals
+Non-overlapping intervals
+Gas Station
+Meeting Rooms
+Backtracking (6–7 problems)
+Subsets
+Permutations
+N-Queens (Hard optional)
+________________________________________
+📌 Phase 3 – Hard Problems (10 hours)
+⚡ You only need ~15 handpicked hards:
+Trapping Rain Water (though medium, treat as hard)
+Regular Expression Matching
+Word Ladder II
+Serialize / Deserialize Binary Tree
+Hard graph/dp problem of choice
+________________________________________
+📌 Phase 4 – Mock Coding Interviews (10 hours)
+5 full mock interviews
+2 with time pressure
+1 pair-programming style
+1 debugging-focused
+________________________________________
+🏗 System Design Plan (35 Hours)
+Senior-level interviews REQUIRE this.
+📌 Phase 1 – Foundations (10 hours)
+Load balancers
+Caching
+Sharding & replication
+Message queues
+CAP theorem
+Consistent hashing
+📌 Phase 2 – Classic FAANG Designs (15 hours)
+Design:
+URL Shortener (bit.ly)
+Instagram feed
+YouTube / TikTok video system
+WhatsApp messaging
+Distributed job scheduler
+Search autocomplete
+Focus on trade-offs + scaling decisions.
+📌 Phase 3 – Mock Designs (10 hours)
+4 mock design interviews
+1 with deep focus on bottlenecks
+1 stressing concurrency
+1 focusing on data modeling
+1 end-to-end whiteboard design
+________________________________________
+💬 Behavioral & Leadership Plan (15 Hours)
+For senior roles, behavioral matters as much as technical.
+Required STAR stories (write 8–12):
+Leadership
+Project rescue
+Conflict management
+Mentoring juniors
+Ownership
+Handling ambiguity
+Driving architecture decisions
+Cross-team collaboration
+Failures & learnings
+Practice with 10–15 common FAANG questions.
+________________________________________
+🏆 What You’ll Achieve at the End
+You’ll be able to:
+✔ Recognize every major DSA pattern
+✔ Solve 90% of FAANG Mediums reliably
+✔ Tackle Hard problems with patterns, not brute force
+✔ Speak clearly about architecture decisions
+✔ Present strong leadership & behavioral answers
+✔ Pass senior-level interviews at FAANG & top-tier companies
+________________________________________
+📥 Want me to generate the following for you?
+I can create any of these:
+A full 120-hour calendar schedule
+A curated LeetCode list (105 problems)
+Daily study plan (1 month or 3 months)
+System design cheat sheet tailored for senior engineers
+Behavioral interview scripts & polished STAR stories
+Which one should I generate next?

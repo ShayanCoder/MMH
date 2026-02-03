@@ -1,0 +1,109 @@
+Advanced Scenario-Based Questions (Java, Spring Boot, Microservices, AWS)
+For 15–20 yrs experience (Principal / Staff / Senior Engineer)
+🔥 1. Distributed Systems & Messaging
+1.1 ECS-deployed consumers reading from SQS/Kafka — how to avoid duplicate message processing?
+Hints:
+SQS: deduplication, message visibility timeout, idempotency keys, distributed locks?
+Kafka: consumer groups, partition assignment, idempotent producers, transactions, offset commits.
+1.2 How do you ensure exactly-once semantics in a microservice reading from Kafka → DB → publish to another topic?
+Hints:
+Outbox pattern, local transactions, Kafka transactions, Debezium CDC.
+1.3 Your microservice processes payments. ECS scales up to 20 tasks. How do you guarantee ordering of events per user?
+1.4 What happens if two ECS tasks pick the same SQS message due to visibility timeout expiry? How do you prevent side effects?
+1.5 How to design an "idempotent API" when backend operations are not naturally idempotent?
+🔥 2. High-Scale Architecture & Microservices
+2.1 How would you design per-user rate limiting in a distributed microservices architecture deployed across multiple ECS tasks?
+Hints:
+Token bucket in Redis / DynamoDB
+Distributed counters
+API Gateway throttling vs application-side throttling
+Sliding window log vs leaky bucket
+Client-level vs system-level
+2.2 How would you design a "global lock" across microservices to avoid concurrent modification of a resource?
+2.3 How do you design a microservice that must handle 100k RPS with <10 ms latency?
+2.4 How to design a distributed cron job when your service runs in 12 ECS tasks and only one must run the job?
+2.5 You have a microservice that becomes slow due to dependency service latency. How do you isolate and protect your service?
+Hints:
+Bulkhead pattern
+Circuit breaker
+Timeouts & retries
+Fallbacks
+Backpressure
+🔥 3. Spring Boot / Spring Cloud Advanced
+3.1 Why do thread pools cause hidden performance issues in reactive Spring applications?
+3.2 How do you debug Spring Boot memory leak in production (ECS)?
+Hints:
+Heap dump via ECS Exec
+MAT / JFR / JMC
+Leaking class loaders
+Caching mistakes
+3.3 How would you write a Spring Boot interceptor that caches responses per user with TTL and invalidation rules?
+3.4 Explain how Spring handles transactions across multiple threads or async boundaries.
+3.5 You have a service that publishes an event only after a DB commit succeeds. How to guarantee this?
+Hints:
+TransactionSynchronizationManager
+Outbox pattern
+@Transactional pitfalls
+🔥 4. Java Concurrency & Performance
+4.1 You have 1M tasks to process. Should you use ThreadPoolExecutor or virtual threads? Why?
+4.2 How do you detect and prevent thread starvation deadlocks in Java?
+4.3 Explain differences between synchronized, ReentrantLock, StampedLock, ReadWriteLock with practical scenarios.
+4.4 How does Java handle false sharing? How to avoid it?
+4.5 How do you optimize a high-GC-rate application?
+Hints:
+G1 tuning
+Allocation profiling
+Escape analysis
+Memory leak detection
+🔥 5. AWS Architecture & Cloud-native
+5.1 How do you implement multi-AZ failover for a microservice using RDS + ECS + ALB?
+5.2 Your Lambda function is getting throttled due to concurrency limits. How do you fix it?
+5.3 How do you design a secure system for storing customer PII on AWS?
+Hints:
+KMS
+Envelope encryption
+DynamoDB TTL
+IAM boundary policies
+5.4 How do you handle distributed caching in AWS in high throughput services?
+Hints:
+ElastiCache
+DAX
+DynamoDB with caching layers
+Global cache invalidations
+5.5 How to implement a blue-green or canary deployment in ECS with zero downtime?
+🔥 6. Databases, Transactions, Consistency
+6.1 How do you design a system that must ensure no two users can reserve the same seat in an event?
+Hints:
+Optimistic locking
+Compare-and-swap
+Distributed locks
+Idempotency
+6.2 How do you handle long-running transactions (>2 seconds) in microservices?
+6.3 How do you design read replicas safely when reading stale data can break business rules?
+6.4 You have a high-write DynamoDB table. How do you avoid hot partitions?
+🔥 7. Security & Resilience
+7.1 How would you secure inter-service communication inside a VPC?
+7.2 How do you detect and prevent replay attacks in your REST APIs?
+7.3 How do you design a zero-trust microservices architecture using Spring Security?
+7.4 How do you implement request signing (like AWS SigV4) in your own services?
+🔥 8. Complex Scenario Design / Architecture Questions
+8.1 Design a globally distributed user-notification system (email + SMS + push) with retries, deduplication, and user-specific throttling.
+8.2 Design a payment system that must be strongly consistent but also high-availability. What trade-offs will you make?
+8.3 Design a microservice for large-file uploads (2–5 GB) that must support resumable uploads.
+8.4 Design an order-processing system with eventual consistency, but users must not see inconsistent order states.
+8.5 Design a real-time analytics dashboard that ingests 500k events/sec.
+
+
+
+https://www.hackerrank.com/contests/vit-bhopal/challenges/remove-all-adjacent-duplicates-in-string-ii
+https://www.youtube.com/watch?v=c7LPlWvxZcQ
+https://www.youtube.com/watch?v=ei6fK9StzMM
+https://www.youtube.com/playlist?list=PL_viHU8It8dfF2v41n3qMYNy8nNqLh-tv
+https://www.udemy.com/course/master-spring-boot-microservice-angular-with-k8s-cicd-aws/?couponCode=MT260825G2
+https://www.youtube.com/@Mindmajix
+https://www.linkedin.com/posts/nk-systemdesign-one_12-best-github-repos-to-boost-your-software-activity-7399439108294594560-YpQJ
+https://www.youtube.com/playlist?list=PLSnvO6pf9FgBItz87KsyXenrwmeJ4j-VF
+https://www.youtube.com/watch?v=MrSECdSIaOg&t=5913s
+https://www.youtube.com/watch?v=E6dEfuzRZVQ
+https://topmate.io/manishverma_professionalit/1815437
+https://www.youtube.com/playlist?list=PLywebt0HrpoUyBn9gF3cz6KgnxC5-pZMK

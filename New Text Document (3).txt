@@ -1,0 +1,162 @@
+These are frequently asked for 2–6 years experience and focus on Streams, Lambdas, Optional, and Collections.
+________________________________________
+1️⃣ Find Duplicate Elements in a List
+Question:
+Find duplicate numbers from a list using Java 8.
+✅ Answer:
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 5);
+
+Set<Integer> duplicates = list.stream()
+        .filter(e -> Collections.frequency(list, e) > 1)
+        .collect(Collectors.toSet());
+
+System.out.println(duplicates);
+
+💡 Better (Optimized) Answer (Recommended in Interview):
+Set<Integer> seen = new HashSet<>();
+
+Set<Integer> duplicates = list.stream()
+        .filter(e -> !seen.add(e))
+        .collect(Collectors.toSet());
+
+System.out.println(duplicates);
+
+________________________________________
+2️⃣ Find First Non-Repeated Character in a String
+String input = "aabbcddee";
+
+Character result = input.chars()
+        .mapToObj(c -> (char) c)
+        .collect(Collectors.groupingBy(
+                c -> c, LinkedHashMap::new, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .filter(e -> e.getValue() == 1)
+        .map(Map.Entry::getKey)
+        .findFirst()
+        .orElse(null);
+
+System.out.println(result);
+
+📌 Key Point: LinkedHashMap preserves insertion order.
+________________________________________
+3️⃣ Sort Map by Values
+Map<String, Integer> map = new HashMap<>();
+map.put("A", 3);
+map.put("B", 1);
+map.put("C", 2);
+
+Map<String, Integer> sortedMap = map.entrySet()
+        .stream()
+        .sorted(Map.Entry.comparingByValue())
+        .collect(Collectors.toMap(
+                Map.Entry::getKey,
+                Map.Entry::getValue,
+                (e1, e2) -> e1,
+                LinkedHashMap::new
+        ));
+
+System.out.println(sortedMap);
+
+________________________________________
+4️⃣ Find Second Highest Number
+List<Integer> numbers = Arrays.asList(10, 20, 30, 40, 50);
+
+Integer secondHighest = numbers.stream()
+        .sorted(Comparator.reverseOrder())
+        .distinct()
+        .skip(1)
+        .findFirst()
+        .orElse(null);
+
+System.out.println(secondHighest);
+
+________________________________________
+5️⃣ Count Occurrences of Each Character in String
+String str = "banana";
+
+Map<Character, Long> charCount = str.chars()
+        .mapToObj(c -> (char) c)
+        .collect(Collectors.groupingBy(
+                c -> c, Collectors.counting()));
+
+System.out.println(charCount);
+
+________________________________________
+6️⃣ Separate Even and Odd Numbers
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+Map<Boolean, List<Integer>> result = list.stream()
+        .collect(Collectors.partitioningBy(n -> n % 2 == 0));
+
+System.out.println("Even: " + result.get(true));
+System.out.println("Odd: " + result.get(false));
+
+________________________________________
+7️⃣ Find Maximum Salary from Employee List
+Optional<Employee> maxSalaryEmployee = employees.stream()
+        .max(Comparator.comparing(Employee::getSalary));
+
+maxSalaryEmployee.ifPresent(System.out::println);
+
+________________________________________
+8️⃣ Convert List to Map
+List<Employee> employees = Arrays.asList(
+        new Employee(1, "Alice", 50000),
+        new Employee(2, "Bob", 60000)
+);
+
+Map<Integer, String> employeeMap = employees.stream()
+        .collect(Collectors.toMap(
+                Employee::getId,
+                Employee::getName
+        ));
+
+System.out.println(employeeMap);
+
+________________________________________
+9️⃣ Check if All Elements Match Condition
+boolean allAbove18 = ages.stream()
+        .allMatch(age -> age > 18);
+
+Related:
+anyMatch()
+noneMatch()
+
+________________________________________
+🔟 Reverse a String Using Java 8
+String input = "hello";
+
+String reversed = IntStream.range(0, input.length())
+        .mapToObj(i -> input.charAt(input.length() - i - 1))
+        .map(String::valueOf)
+        .collect(Collectors.joining());
+
+System.out.println(reversed);
+
+________________________________________
+⭐ Bonus: Explain in Interview (Very Important)
+Topic
+What to Say
+Stream
+Lazy evaluation
+filter
+Reduces data
+map
+Transforms data
+Optional
+Avoids NPE
+forEach
+Terminal operation
+________________________________________
+🎯 How to Prepare for Interview Using This
+✔ Practice explaining each line
+✔ Know time complexity
+✔ Be ready with alternative solutions
+✔ Prefer Streams + Clean Code
+________________________________________
+If you want next:
+🔥 Java 8 coding questions with Employee class
+🔥 Tricky Stream API questions
+🔥 Java 8 + Collections interview combo
+Just tell me 👍

@@ -1,0 +1,107 @@
+req:
+
+
+100k-->shortening
+NAM,EU,Asia
+bit.ly/c123--> 2 KB
+
+
+NFR:
+80/20
+deployment ci/cd
+
+10K*2KB*365--
+
+
+Entity
+
+"UrlDetail"
+
+
+api gateway---where to enable, disable API not used
+correlation id--- distributed tracing
+keycloak, how to add user
+how to read secret key from AWS
+jscrot...encrypt
+
+TxId
+shortUrl
+API
+timestamp
+
+"Analytics"
+
+APi
+Hit
+
+@Controller
+
+@getMapping
+fetchAPI(@Pathvariable url)
+{
+//Service call after validation
+}
+
+@PostMapping(@RequestBody ){
+//Service call after validation
+}
+
+
+short url------
+
+
+
+12345678910
+
+counter i = 0;
+
+Thread t1= new Thread().start(){
+printOdd();
+}
+
+Thread t2= new Thread().start(){
+printEven(i%2);
+
+}
+
+printOdd(){
+while(i/2)
+
+}
+
+
+========================================
+
+Class Parent{
+regionId
+Integer rich;
+List <Parent> parentList;--100
+
+
+}
+
+List<Region>--1
+
+
+Class Member{
+List<Member>
+}
+
+MemberTree memberTree = new TreeMap();
+count = 0;
+
+
+if(null!= memberTree.add(Member))
+count ++;
+
+Class MemberTree{
+traverse();
+
+
+public void Traverse(){
+if member!=null
+print();
+}
+}
+
+The C4 model is a system design approach that visualizes software architecture at different levels of abstraction, using four levels: Context, Container, Component, and Code. It's a simplified way to represent complex systems, making them easier to understand for both technical and non-technica
